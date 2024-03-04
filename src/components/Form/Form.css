@@ -1,0 +1,39 @@
+.form-container {
+  margin-top: 10vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.form-element {
+  width: 25vw;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.form-element:focus {
+  outline: none;
+}
+
+.form-element:invalid {
+  border: 2px solid red;
+}
+
+
+.submit-button { 
+  color: white;
+  width: 7vw;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+}

@@ -1,16 +1,18 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC21_mQWuG7TC41_LgxcmA4Osxsvcx8vLE",
-  authDomain: "gas-analytics-c435c.firebaseapp.com",
-  projectId: "gas-analytics-c435c",
-  storageBucket: "gas-analytics-c435c.appspot.com",
-  messagingSenderId: "297827466080",
-  appId: "1:297827466080:web:49c23ed6e3a020496dfc05",
-  measurementId: "G-F3N9KJS46Y"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
 
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getFirestore(app);
+export {db}
